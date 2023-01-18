@@ -20,7 +20,7 @@
                 password: <input type="text" name="password">
             </div>
             <div>
-                <button>Register</button>
+                <button>登録する</button>
             </div>
             <a href="login.php">or login</a>
         </fieldset>

@@ -14,7 +14,7 @@ $password = $_POST["password"];
 
 $pdo = connect_to_db();
 
-$sql = 'SELECT COUNT(*) FROM users_table WHERE email=:email';
+$sql = 'SELECT COUNT(*) FROM users_table_00 WHERE email=:email';
 
 $stmt = $pdo->prepare($sql);
 $stmt->bindValue(':email', $email, PDO::PARAM_STR);

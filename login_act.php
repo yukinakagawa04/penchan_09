@@ -13,7 +13,7 @@ $password = $_POST['password'];
 $pdo = connect_to_db();
 
 // SQL実行
-$sql = "SELECT * FROM users_table WHERE email= :email AND password = :password AND deleted_at IS NULL";
+$sql = "SELECT * FROM users_table_00 WHERE email= :email AND password = :password AND deleted_at IS NULL";
 $stmt = $pdo->prepare($sql);
 $stmt->bindValue(':email', $email, PDO::PARAM_STR);
 $stmt->bindValue(':password', $password, PDO::PARAM_STR);

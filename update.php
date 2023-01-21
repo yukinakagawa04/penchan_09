@@ -24,7 +24,7 @@ $id = $_POST["id"];
 
 $pdo = connect_to_db();
 
-$sql = "UPDATE users_table SET email=:email, password=:password, updated_at=now() WHERE id=:id";
+$sql = "UPDATE users_table_00 SET email=:email, password=:password, updated_at=now() WHERE id=:id";
 
 $stmt = $pdo->prepare($sql);
 $stmt->bindValue(':email', $email, PDO::PARAM_STR);

@@ -5,7 +5,7 @@ check_session_id();
 
 $pdo = connect_to_db();
 
-$sql = 'SELECT * FROM users_table WHERE deleted_at IS NULL';
+$sql = 'SELECT * FROM users_table_00 WHERE deleted_at IS NULL';
 
 
 $stmt = $pdo->prepare($sql);

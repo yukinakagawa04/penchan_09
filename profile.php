@@ -8,7 +8,7 @@ check_session_id();
 $id = $_GET["id"];
 $pdo = connect_to_db();
 
-$sql = 'SELECT * FROM users_table WHERE id=:id';
+$sql = 'SELECT * FROM 00_users_table WHERE id=:id';
 
 $stmt = $pdo->prepare($sql);
 $stmt->bindValue(':id', $id, PDO::PARAM_INT);

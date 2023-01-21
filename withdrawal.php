@@ -2,6 +2,21 @@
 session_start();
 include("functions.php");
 check_session_id();
+
+$pdo = connect_to_db();
+
+$sql = 'SELECT * FROM users_table WHERE deleted_at IS NULL';
+
+
+$stmt = $pdo->prepare($sql);
+
+try {
+    $status = $stmt->execute();
+} catch (PDOException $e) {
+    echo json_encode(["sql error" => "{$e->getMessage()}"]);
+    exit();
+}
+
 ?>
 
 
